@@ -128,7 +128,7 @@ It supports:
 - Playing all four quadrant videos
 
 
-![Animated technical demonstration of four quadrant videos illustrating walkability and vehicle exposure categories](assets/quad_quadrants_video-ezgif.com-gif-to-mp4-converter (1).gif)
+![Animated technical demonstration of four quadrant videos illustrating walkability and vehicle exposure categories](assets/quad_quadrants.gif)
 
 
 ## Frame Lookup Interface
@@ -159,117 +159,6 @@ A    3
 B    3
 C    2
 
-<!-- 
-## Usage
-
-### Quick Start
-
-Run the main pipeline to generate walkability scores:
-
-```bash
-python main.py
-```
-
-This will:
-1. Generate or load static walkability data
-2. Generate or load dynamic walkability data
-3. Create spatial grid analysis
-4. Compute combined scores
-
-### Configuration
-
-Customize analysis parameters in the config files:
-
-- **`config/static_ws.py`**: Static feature weights, buffer radius, essential POI tags
-- **`config/dynamic_ws.py`**: Dynamic feature parameters and data paths
-- **`config/grid.py`**: Grid cell size and margin parameters
-
-### Running Evaluations
-
-```bash
-# Run feature evaluation
-python eval.py
-
-# Or execute specific evaluation modules
-python -c "from eval.static_feature_eval import run_static_feature_eval; run_static_feature_eval()"
-```
-
-### Jupyter Notebooks
-
-Explore data and visualizations:
-
-```bash
-jupyter notebook notebooks/static_eval.ipynb
-jupyter notebook notebooks/dynamic_eval.ipynb
-```
-
-## Configuration Parameters
-
-### Static Walkability (config/static_ws.py)
-
-| Parameter | Default | Description |
-|-----------|---------|-------------|
-| `BUFFER_M` | 300 | Analysis radius in meters |
-| `FETCH_PAD_M` | 1200 | Padding around convex hull for data fetching |
-| `LANE_WIDTH_M` | 7.0 | Drivable area proxy (2 lanes) |
-| `SCALE_M` | 300.0 | Scale normalization factor |
-
-### Features Included
-
-Each feature is weighted equally (1/7 weight each):
-- intersection_density_n
-- poi_entropy_n
-- essential_poi_count_n
-- transit_proximity_n
-- walkway_n
-- sidewalk_n
-- drivable_inv_n
-
-## Output Files
-
-- **CSV Files**: Walkability scores with spatial coordinates
-- **HTML Maps**: Interactive Folium maps showing:
-  - Static walkability distribution
-  - Dynamic walkability distribution
-  - Composite score comparison
-  - Grid-based spatial analysis
-
-## Data Sources
-
-- **OpenStreetMap**: Street networks, POIs, transit infrastructure via Overpass API
-- **GPS Data**: Temporal movement patterns (KITTI 360 dataset support)
-- **Real Estate Data**: Redfin property data integration (optional)
-
-## Development
-
-### Adding New Features
-
-1. Implement feature computation in appropriate `src/` module
-2. Update configuration with feature weights
-3. Add evaluation logic to `eval/` modules
-4. Update VIF feature lists in config
-
-### Extending to New Regions
-
-1. Update GPS data path in `config/static_ws.py`
-2. Adjust `BUFFER_M` and `FETCH_PAD_M` for region size
-3. Modify `ESSENTIAL_TAGS` for regional POI priorities
-4. Run main pipeline to generate new outputs
-
-## Performance Notes
-
-- Large geographic areas may require multiple Overpass API calls
-- Grid generation time scales with cell count
-- Cached API responses stored in `cache/` directory
-- Consider data filtering for regions larger than 10 km²
-
-## License
-
-[Specify your license here]
-
-## Contributing
-
-[Add contribution guidelines if applicable] -->
 
 ## Contact
 
