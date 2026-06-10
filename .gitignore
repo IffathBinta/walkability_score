@@ -6,6 +6,10 @@ __pycache__/
 # C extensions
 *.so
 
+outputs/
+cache/
+redfin_score/*
+
 # Distribution / packaging
 .Python
 build/
